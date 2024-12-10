@@ -5,13 +5,17 @@
 #define INF 99999999
 using namespace std;
 
-
-
+int factorial(int n)
+{
+    if(n <= 1)
+        return 1;
+    return n * factorial(n-1);
+}
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-    int h, m, s, d;
-    cin>>h>>m>>s>>d;
-    cout<<(h+(m+(s+d)/60)/60)%24<<" "<<(m+(s+d)/60)%60<<" "<<(s+d)%60;
-    return 0;
+    int n; cin >> n;
+    cout << factorial(n);
+
+
 }
