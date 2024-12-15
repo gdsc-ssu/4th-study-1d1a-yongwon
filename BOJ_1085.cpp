@@ -9,9 +9,12 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-    int A, B, V,D;
-    cin >> A >> B >> V;
-    D = (V - B - 1) / (A - B) + 1;
-    cout << D;
-    return 0;
+    int x,y,w,h;
+    int t1,t2;
+    cin >> x >> y >> w >> h;
+    t1 = min(x,y);
+    t2 = min(w-x,h-y);
+    cout << min(t1,t2);
+
+
 }
