@@ -5,19 +5,16 @@
 #define INF 99999999
 using namespace std;
 
-int arr[31];
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-
-    int a;
-
-    for(int i = 0; i < 28; i++) {
+    int a=0,sum=0;
+    for(int i=0;i<5;i++) {
         cin >> a;
-        arr[a] = 1;
+        if(a<40)
+            a=40;
+        sum+=a;
     }
-
-    for(int i = 1; i <= 30; i++) {
-        if(!arr[i]) cout << i << '\n';
-    }
+    cout << sum/5;
 }
